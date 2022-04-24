@@ -1,0 +1,163 @@
+/* 
+
+EXPERIMENT 2 | "ANIMATED"
+
+~
+
+Using CSS keyframe animations, create a webpage that has at least one
+motion or time-based element to its design. The content and visual
+direction are up to you. It doesn't need to be a full webpage, just
+an example of using CSS animations at least once (more is encouraged).
+
+https://www.w3schools.com/css/css3_animations.asp
+
+~
+
+CSS Grid can be a huge help here (it's great for almost all layout stuff for web)
+and there are a few links to help you get started on the class resources page:
+
+https://ianmcdonald.ca/resources/
+
+~ 
+
+Have fun, break things, try new things ... this is an experiment after all :)
+
+
+Ok, now for the styles!
+
+*/
+
+
+
+/* BASE STYLES
+============================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  background: var(--light);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  max-height: 100vh;
+  margin-top: 20vh;
+}
+
+
+/* YOUR STYLES
+============================================================================== */
+body {
+  animation-name: background-colour;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.w {
+  max-width:255px;
+  transform: translateY(21.5em);
+  animation-name: w;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+.o1 {
+  max-width: 200px;
+  margin-left: 12.5em;
+  animation-name: o1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+.o2 {
+  max-width: 200px;
+  transform: translateY(-22.7em);
+  margin-left: 22.8em;
+  animation-name: o2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 5s;
+  animation-timing-function: ease-in-out;
+}
+
+.l {
+  max-width: 200px;
+  min-width: 200px;
+  transform: translateY(-45.2em);
+  margin-left: 30.5em;
+  animation-name: l;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 5.8s;
+  animation-timing-function: ease-in-out;
+}
+
+/* ANIMATIONS
+============================================================================== */
+
+@keyframes background-colour {
+
+    from {  background-color: #be7359;}
+
+    to {  background-color: #e9d2be;}
+}
+
+@keyframes w {
+  
+    from {  transform: translateY(21.5em); }
+
+    to {  transform: translateY(19em); }
+
+}
+
+@keyframes o1 {
+  
+    from {  transform: translateY(0em); }
+
+    to {  transform: translateY(-2.8em); }
+
+}
+
+@keyframes o2 {
+  
+  from {  transform: translateY(-22.7em); }
+
+  to {  transform: translateY(-26em); }
+
+}
+
+@keyframes l {
+  
+  from {  transform: translateY(-45.2em); }
+
+  to {  transform: translateY(-48em); }
+
+}
